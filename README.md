@@ -10,3 +10,10 @@ Furthermore, I have prepared a CSV file containing the actual count of taxis, th
 I invite you to take a look at the attached CSV file and explore the predictions we made during the hackathon. If you have any questions or would like to discuss our approach in more detail, I would be more than happy to share my insights.
 
 Thank you for your support, and I hope you find our work interesting and valuable!
+
+The results of the model on the remaining data were impressive, with a
+TRAINING-SCORE : 0.964 and a TEST-SCORE : 0.926 📈🔍
+
+However, what truly amazed me was the exceptional result on the
+EXTERNAL TEST, achieving an R-SQUARED SCORE : 0.941 🎉
+
