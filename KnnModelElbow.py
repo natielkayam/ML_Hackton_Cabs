@@ -90,11 +90,19 @@ random_X[random_X.columns] = scaler.transform(random_X[random_X.columns])
 
 predictions = knn.predict(random_X)
 
-# Compare predictions with actual values
-# for i, prediction in enumerate(predictions):
-#     actual_value = random_y.iloc[i]['count']
-#     print(f"Actual: {actual_value}, Predicted: {prediction}")
-
 # Calculate R-squared score
 r2_score = knn.score(random_X, random_y)
-print(f"R-squared score: {r2_score:.3f}")
+print(f"External data test R-squared score: {r2_score:.3f}")
+
+# Calculate the absolute differences between predicted count and actual count
+abs_diff = abs(random_y['count'].values.flatten() - predictions.flatten())
+
+# Create a DataFrame with columns for the actual count, predicted count, and score
+results_df = pd.DataFrame({
+    'count': random_y['count'].values.flatten(),
+    'predicted_count': predictions.flatten(),
+    'score': abs_diff
+})
+
+
+results_df.to_csv("resultsDF.csv")
