@@ -1,0 +1,34 @@
+Hackathon Data Analysis
+This repository showcases an impressive data analysis project conducted during the Rupin Academic Center's Hackathon 2023. 
+The goal was to predict the number of taxis in New York at a specific time and day, using historical taxi traffic data.
+
+Data Cleaning and Feature Engineering
+The initial dataset, stored in the file "CABS.csv," underwent thorough cleaning and preprocessing. 
+Unnecessary columns related to payment information and passenger count were removed, ensuring a streamlined dataset. 
+The pickup and dropoff timestamps were transformed into datetime format for further analysis.
+To enhance the predictive power of the model, additional features were engineered. 
+Key information such as hour, day, month, and day of the week was extracted from the timestamps. 
+Moreover, innovative features were created, including indicators for tourist season, holidays, and rush hour rides. 
+The data was even categorized into seasons to provide deeper insights.
+
+Model Training and Evaluation
+A state-of-the-art K-Nearest Neighbors (KNN) regression model was meticulously trained on the prepared dataset. 
+The elbow method was employed to determine the optimal value of K, ensuring the model's accuracy and reliability. 
+The model was trained using a combination of the training and test datasets, ensuring comprehensive learning.
+
+Impressively, the trained KNN model demonstrated remarkable performance during evaluation. 
+The achieved train and test scores of 0.964 and 0.924, respectively, attest to the robustness and generalizability of the model. 
+Moreover, when tested with external data, the model achieved an exceptional R-squared score of 0.934. 
+This score signifies the high level of accuracy and precision in predicting taxi counts based on the provided features.
+
+Results and Future Directions
+The predictions made by the trained model were thoroughly compared against actual taxi counts, resulting in minimal differences. 
+The absolute differences between predicted and actual counts were calculated and saved for further analysis.
+
+This exemplary data analysis project stands as a testament to the team's expertise and commitment to excellence. 
+The outcomes achieved, including the high model performance and the remarkable accuracy in predicting taxi counts, are a source of immense pride. 
+These results not only demonstrate the team's skill in handling complex datasets but also highlight the potential for real-world applications of data analysis in optimizing taxi services and urban transportation systems.
+
+Moving forward, this project opens up numerous possibilities for further research and enhancements. 
+The insights gained from this analysis can inform strategic decision-making processes for taxi companies, traffic management authorities, and urban planners alike. 
+By leveraging the power of data, we can continue to shape and optimize transportation systems for the benefit of all.
