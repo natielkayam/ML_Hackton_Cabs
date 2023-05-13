@@ -1,0 +1,30 @@
+## Code Description
+The code provided in this repository performs the following tasks:
+
+1. Data Loading and Cleaning:
+   - The code loads the raw data from the 'CABS.csv' file into a Pandas DataFrame.
+   - Unnecessary columns related to payment information, fare, and passenger count are dropped.
+   - Date and time columns are converted to the appropriate data types.
+   - Columns related to store and forward flag, passenger count, and vendor ID are removed.
+
+2. Data Transformation and Enrichment:
+   - Rate code and vendor ID information is printed to understand the unique values present.
+   - A lookup table is loaded from the provided URL to map taxi zone IDs to zone names.
+   - The DataFrame is merged with the lookup table to add pickup and dropoff location names.
+   - Null values in pickup and dropoff locations and rate code are dropped.
+   - Additional features such as pickup hour, day, month, day of the week, dropoff hour, day, month, day of the week, tourist season indicator, holiday indicator, rush hour indicator, and season are derived from the existing date and time columns.
+
+3. Data Analysis and Export:
+   - The code checks for any remaining null values in the DataFrame.
+   - The DataFrame is exported to a cleaned CSV file named 'hacktoncleanedDF.csv'.
+
+## How to Use
+To use this code, follow these steps:
+
+1. Ensure that the 'CABS.csv' file containing the raw taxi traffic data is present in the same directory as the code file.
+2. Install the necessary dependencies (Pandas and NumPy).
+3. Run the code.
+4. Once the code execution is complete, the cleaned DataFrame will be saved in the 'hacktoncleanedDF.csv' file.
+
+## Conclusion
+The provided code performs data cleaning, transformation, and enrichment tasks to prepare the taxi traffic data for analysis. By executing this code, you can generate a cleaned dataset that can be used for further analysis and modeling tasks.
